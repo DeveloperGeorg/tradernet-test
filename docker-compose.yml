@@ -1,0 +1,40 @@
+version: '3'
+services:
+  # Web Server
+  web:
+    container_name: tradernet_web
+    build:
+      context: ./
+      dockerfile: web.dockerfile
+    working_dir: /var/www/www
+    volumes:
+      - ./app:/var/www/www
+    networks:
+      testing_net:
+        ipv4_address: 172.30.1.1
+    ports:
+      - "80:80"
+  # Application
+  app:
+    container_name: tradernet_app
+    build:
+      context: ./
+      dockerfile: php.dockerfile
+    working_dir: /var/www/www
+    volumes:
+      - ./app:/var/www/www
+    networks:
+      testing_net:
+        ipv4_address: 172.30.1.2
+
+volumes:
+  dbdata:
+  app:
+  crond:
+
+networks:
+  testing_net:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.30.0.0/16
