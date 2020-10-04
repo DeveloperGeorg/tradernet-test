@@ -7,6 +7,7 @@ use App\Modules\DayRate\RateDiffGetterInterface as DayRateFacadeInterface;
 use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use InvalidArgumentException;
 
 class RateController extends Controller
 {
@@ -29,10 +30,17 @@ class RateController extends Controller
     public function getOne(Request $request)
     {
         $date = (string)$request->get('date');
+        if (strlen($date) <= 0) {
+            throw new InvalidArgumentException('date required');
+        }
+        $dateTime = DateTime::createFromFormat('Y-m-d', $date);
+        if (!($dateTime instanceof DateTime) || $dateTime->format('Y-m-d') !== $date) {
+            throw new InvalidArgumentException('Wrong pattern date (Y-m-d)');
+        }
         $quoteCurrency = (string)$request->get('quoteCurrency');
         $baseCurrency = (string)$request->get('baseCurrency');
         $rateDiff = $this->dayRateFacade->getRateDiff(
-            DateTime::createFromFormat('Y-m-d', $date),
+            $dateTime,
             $quoteCurrency,
             $baseCurrency
         );
