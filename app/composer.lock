@@ -60,25 +60,22 @@
         },
         {
             "name": "developergeorg/cbr-day-rate-soap",
-            "version": "0.0.7",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DeveloperGeorg/cbr-day-rate-soap.git",
-                "reference": "7c449fb8d723252a4977cf5d71372effc9b9290f"
+                "reference": "c6510f8739cb6dfed1648274d1e0173b90621822"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DeveloperGeorg/cbr-day-rate-soap/zipball/7c449fb8d723252a4977cf5d71372effc9b9290f",
-                "reference": "7c449fb8d723252a4977cf5d71372effc9b9290f",
+                "url": "https://api.github.com/repos/DeveloperGeorg/cbr-day-rate-soap/zipball/c6510f8739cb6dfed1648274d1e0173b90621822",
+                "reference": "c6510f8739cb6dfed1648274d1e0173b90621822",
                 "shasum": ""
             },
             "require": {
                 "developergeorg/cbr-simple-soap": "*",
                 "developergeorg/day-rate": "*",
                 "ext-simplexml": "*"
-            },
-            "require-dev": {
-                "squizlabs/php_codesniffer": "3.*"
             },
             "type": "library",
             "autoload": {
@@ -94,28 +91,25 @@
                     "email": "developergeorg@gmail.com"
                 }
             ],
-            "time": "2020-10-03T18:21:26+00:00"
+            "time": "2020-10-04T10:21:42+00:00"
         },
         {
             "name": "developergeorg/cbr-simple-soap",
-            "version": "0.0.2",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DeveloperGeorg/cbr-simple-soap.git",
-                "reference": "ae96d22412984536d036a02a78db26d56132e04f"
+                "reference": "15ccd4df3d8cf07094290aac40229a4b76199060"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DeveloperGeorg/cbr-simple-soap/zipball/ae96d22412984536d036a02a78db26d56132e04f",
-                "reference": "ae96d22412984536d036a02a78db26d56132e04f",
+                "url": "https://api.github.com/repos/DeveloperGeorg/cbr-simple-soap/zipball/15ccd4df3d8cf07094290aac40229a4b76199060",
+                "reference": "15ccd4df3d8cf07094290aac40229a4b76199060",
                 "shasum": ""
             },
             "require": {
                 "ext-simplexml": "*",
                 "ext-soap": "*"
-            },
-            "require-dev": {
-                "squizlabs/php_codesniffer": "3.*"
             },
             "type": "library",
             "autoload": {
@@ -131,24 +125,21 @@
                     "email": "developergeorg@gmail.com"
                 }
             ],
-            "time": "2020-10-03T11:06:17+00:00"
+            "time": "2020-10-04T10:05:49+00:00"
         },
         {
             "name": "developergeorg/day-rate",
-            "version": "0.0.7",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DeveloperGeorg/day-rate.git",
-                "reference": "37275d47afe30fe8e909be7a990378992346e756"
+                "reference": "8ef3ebfe8d8b47dd4db6455594ca751319461300"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DeveloperGeorg/day-rate/zipball/37275d47afe30fe8e909be7a990378992346e756",
-                "reference": "37275d47afe30fe8e909be7a990378992346e756",
+                "url": "https://api.github.com/repos/DeveloperGeorg/day-rate/zipball/8ef3ebfe8d8b47dd4db6455594ca751319461300",
+                "reference": "8ef3ebfe8d8b47dd4db6455594ca751319461300",
                 "shasum": ""
-            },
-            "require-dev": {
-                "squizlabs/php_codesniffer": "3.*"
             },
             "type": "library",
             "autoload": {
@@ -164,7 +155,7 @@
                     "email": "developergeorg@gmail.com"
                 }
             ],
-            "time": "2020-10-03T18:03:10+00:00"
+            "time": "2020-10-04T10:28:59+00:00"
         },
         {
             "name": "doctrine/inflector",
