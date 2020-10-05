@@ -5,7 +5,7 @@ namespace App\Modules\DayRate;
 use DateTime;
 
 /**
- * Interface FacadeInterface
+ * Interface RateDiffGetterInterface
  *
  * @package App\Modules\DayRate
  */
