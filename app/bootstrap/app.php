@@ -1,8 +1,7 @@
 <?php
 
-use App\Modules\DayRate\RateDiffGetterInterface as RateDiffGetterInterface;
-use App\Modules\DayRate\RateDiffGetter as RateDiffGetterFacade;
-use DayRate\DayRateGetterInterface;
+use App\Modules\DayRate\RateDiffGetterInterface;
+use App\Modules\DayRate\RateDiffGetter;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -28,7 +27,7 @@ $app = new Laravel\Lumen\Application(
 );
 
 $app->withFacades();
-$app->bind(RateDiffGetterInterface::class, RateDiffGetterFacade::class);
+$app->bind(RateDiffGetterInterface::class, RateDiffGetter::class);
 
 
 // $app->withEloquent();
