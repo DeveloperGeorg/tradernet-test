@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\ApiDayRateDiff;
-use App\Modules\DayRate\RateDiffGetterInterface as DayRateFacadeInterface;
+use App\Modules\DayRate\RateDiffGetterInterface;
 use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -12,18 +12,18 @@ use InvalidArgumentException;
 class RateController extends Controller
 {
     /**
-     * @var DayRateFacadeInterface
+     * @var RateDiffGetterInterface
      */
-    private $dayRateFacade;
+    private $rateDiffGetter;
 
     /**
      * Create a new controller instance.
      *
-     * @param DayRateFacadeInterface $dayRateFacade
+     * @param RateDiffGetterInterface $dayRateFacade
      */
-    public function __construct(DayRateFacadeInterface $dayRateFacade)
+    public function __construct(RateDiffGetterInterface $dayRateFacade)
     {
-        $this->dayRateFacade = $dayRateFacade;
+        $this->rateDiffGetter = $dayRateFacade;
     }
 
     //
@@ -39,7 +39,7 @@ class RateController extends Controller
         }
         $quoteCurrency = (string)$request->get('quoteCurrency');
         $baseCurrency = (string)$request->get('baseCurrency');
-        $rateDiff = $this->dayRateFacade->getRateDiff(
+        $rateDiff = $this->rateDiffGetter->getRateDiff(
             $dateTime,
             $quoteCurrency,
             $baseCurrency
